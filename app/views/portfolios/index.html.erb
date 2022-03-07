@@ -2,6 +2,7 @@
 
 <% @portfolios_items.each do |portfolios_items| %>
 <p><%= portfolios_items.title %></p>
+<p><%= portfolios_items.subtitle %></p>
 <p><%= portfolios_items.body %></p>
-<%= image_tag portfolios_items.thumb_image %>
+<%= image_tag portfolios_items.thumb_image unless portfolios_items.thumb_image.nil? %>
 <% end %>
